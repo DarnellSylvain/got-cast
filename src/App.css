@@ -1,38 +1,112 @@
-.App {
-  text-align: center;
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Montserrat", "Open Sans", sans-serif;
+	/* background: transparent
+		radial-gradient(closest-side at 48% 0%, #5caecb 0%, #000000 100%) 0% 0%
+		no-repeat padding-box; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+	background: #0f2a34;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+	max-width: 1366px;
+	margin: 0 auto;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header {
+	padding-top: 32px;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	/* border: 1px solid red; */
 }
 
-.App-link {
-  color: #61dafb;
+.header-image {
+	width: 369px;
+	height: 163px;
+
+	margin: 0 auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header-image img {
+	height: 100%;
+	width: 100%;
+}
+
+.header input {
+	width: 60%;
+	height: 60px;
+	margin: 0 auto;
+	padding-left: 20px;
+	margin-top: 35px;
+	border-radius: 24px;
+}
+
+.header input:focus {
+	outline: none;
+}
+
+.card {
+	width: 312px;
+	height: 392px;
+	background: transparent;
+	content: "";
+	border-radius: 20px;
+	overflow: hidden;
+	/* width: 100%; */
+}
+
+.card-inner {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+}
+
+.card-front {
+	height: 100%;
+	width: 312px;
+	overflow: hidden;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+
+.card-front img {
+	height: 100%;
+	margin: 0 auto;
+	display: block;
+	margin: auto;
+	object-fit: cover;
+	border-radius: 20px;
+}
+
+.cards {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1rem;
+	margin: 0 auto;
+	margin-top: 32px;
+	border: none;
+}
+
+@media (max-width: 1288px) {
+	.cards {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (max-width: 974px) {
+	.cards {
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
